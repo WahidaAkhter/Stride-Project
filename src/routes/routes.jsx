@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import DashboardLayout from "../layoutes/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
+import Registration from "../pages/Registration";
 
 
 export const router = createBrowserRouter([
@@ -16,7 +17,8 @@ export const router = createBrowserRouter([
         children: [
             {
             path: '/',
-            element: <Home/>,
+                element: <Home />,
+            loader : ()=>fetch("http://localhost:3000/shoes"),
             },
             {
                 path: '/about',
@@ -25,6 +27,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element:<Login/>,
+            },
+            {
+                path: '/register',
+                element: <Registration/>,
             },
         ]
     },

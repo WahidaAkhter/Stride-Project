@@ -33,7 +33,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link to={"/login"}>Login</Link>
-          </li>
+            </li>
+            <li>
+                  <Link to={"/register"}>Register</Link>
+            </li>
           <li>
             <Link to={"/dashboard"}>Dashboard</Link>
           </li>
@@ -51,14 +54,17 @@ const Navbar = () => {
         </li>
         <li>
           <Link to={"/login"}>Login</Link>
-        </li>
+          </li>
+          <li>
+                <Link to={"/register"}>Register</Link>
+            </li>
         <li>
           <Link to={"/dashboard"}>Dashboard</Link>
         </li>
       </ul>
     </div>
     <div className="navbar-end">
-      <a className="btn">Button</a>
+      <a className="btn">LogOut</a>
     </div>
   </div>
 );
