@@ -9,6 +9,7 @@ import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import ProductDetails from "../pages/ProductDetails";
 import AllProducts from "../pages/AllProducts";
+import AddProducts from "../pages/AddProducts";
 
 
 export const router = createBrowserRouter([
@@ -53,7 +54,11 @@ export const router = createBrowserRouter([
                 {
                     path: "all-products",
                     element: <AllProducts />
-                }
+                },
+                {
+                    path: "add-products",
+                    element: <AddProducts />
+                },
         ],
     }
    
