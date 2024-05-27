@@ -7,6 +7,7 @@ import ErrorPage from "../pages/ErrorPage";
 import DashboardLayout from "../layoutes/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
+import ProductDetails from "../pages/ProductDetails";
 
 
 export const router = createBrowserRouter([
@@ -20,6 +21,12 @@ export const router = createBrowserRouter([
                 element: <Home />,
             loader : ()=>fetch("http://localhost:3000/shoes"),
             },
+            {
+                path: "/products/:id",
+                element: <ProductDetails />,
+                loader: ({ params }) =>
+                  fetch(`http://localhost:3000/shoes/${params.id}`),
+              },
             {
                 path: '/about',
                 element: <About/>,
