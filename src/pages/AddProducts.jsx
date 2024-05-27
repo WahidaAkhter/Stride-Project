@@ -8,7 +8,6 @@ const AddProducts = () => {
       const brand = form.brand.value;
       const price = form.price.value;
       const description = form.description.value;
-  
       const data = { id, title, brand, price, description, };
   
       await fetch("http://localhost:3000/shoes", {
