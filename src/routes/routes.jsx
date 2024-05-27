@@ -8,6 +8,7 @@ import DashboardLayout from "../layoutes/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
 import Registration from "../pages/Registration";
 import ProductDetails from "../pages/ProductDetails";
+import AllProducts from "../pages/AllProducts";
 
 
 export const router = createBrowserRouter([
@@ -45,7 +46,15 @@ export const router = createBrowserRouter([
         path: '/dashboard',
         element: <DashboardLayout />,
         errorElement: <ErrorPage />,
-        children: [{ path: "", element: <Dashboard/> }],
+        children:
+        [
+                { path: "", element: <Dashboard /> },
+            
+                {
+                    path: "all-products",
+                    element: <AllProducts />
+                }
+        ],
     }
    
   ]);
