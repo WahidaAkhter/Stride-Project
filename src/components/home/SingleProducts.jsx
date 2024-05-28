@@ -7,11 +7,11 @@ const SingleProducts = ({ shoe }) => {
   const { id, title, brand, price, description,image_url} = shoe;
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card  lg:card-center bg-base-100 shadow-xl my-5 mx-5">
      <figure>
         <img src={image_url} alt="Shoes" />
       </figure>
-    <div className="card-body">
+    <div className="card-body my-2 mx-2">
         <h2 className="card-title">{title}</h2>
         <h3 className="text-xl font-semibold">Brand : {brand}</h3>
         <h3 className="text-xl font-semibold">Price : {price}$</h3>
