@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const SingleProductCardDashboard = ({ shoe, onDelete }) => {
   const { id, title, brand, price, description, image_url } = shoe;
+  
 
   const handleDelete = async () => {
     await fetch(`http://localhost:3000/shoes/${id}`, {
@@ -14,6 +15,7 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
         console.log(data);
         onDelete(id);
       });
+
   };
 
   return (
@@ -33,7 +35,8 @@ const SingleProductCardDashboard = ({ shoe, onDelete }) => {
           <button className="btn bg-green-600 text-white">
             <Link to={`edit/${id}`}>Edit</Link>
           </button>
-          <button onClick={handleDelete} className="btn bg-red-500 text-white">
+          <button onClick={handleDelete} className="btn bg-red-500 text-white
+          ">
             Delete
           </button>
         </div>
