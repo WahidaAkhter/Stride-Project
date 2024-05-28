@@ -3,7 +3,8 @@ import SingleProductCardDashboard from "../components/home/dashboard/SingleProdu
 
 const AllProducts = () => {
 
-    const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  alert("you just deleted a product");
 
     useEffect(() => {
         fetch("http://localhost:3000/shoes/")
@@ -24,6 +25,7 @@ const AllProducts = () => {
           key={shoe.id}
           shoe={shoe}
           onDelete={handleDeleteProduct}
+          onClick={"alert"}
         />
       ))}
     </div>

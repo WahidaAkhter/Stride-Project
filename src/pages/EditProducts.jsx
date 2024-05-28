@@ -14,7 +14,7 @@ const EditProducts = () => {
   
     const handleSubmit = async (e) => {
       e.preventDefault();
-  
+      alert("you just edit a product");
       const form = e.target;
       const id = form.id.value;
       const title = form.title.value;
@@ -106,7 +106,8 @@ return (
             <input
               className="btn mt-4 w-full bg-blue-500 text-white p-4"
               type="submit"
-              value="Edit Product"
+            value="Edit Product"
+            onClick={"alert"}
             />
           </div>
         </form>

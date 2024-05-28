@@ -1,6 +1,8 @@
 const AddProducts = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
+
+      alert("Congrats! you just added a new product");
   
       const form = e.target;
       const id = form.id.value;
@@ -8,7 +10,9 @@ const AddProducts = () => {
       const brand = form.brand.value;
       const price = form.price.value;
       const description = form.description.value;
-      const data = { id, title, brand, price, description, };
+      const image_url = form.image_url.value;
+
+      const data = { id, title, brand, price, description, image_url };
   
       await fetch("http://localhost:3000/shoes", {
         method: "POST",
@@ -64,6 +68,14 @@ const AddProducts = () => {
                 placeholder="Description"
               />
             </div>
+            <div className="mt-2">
+            <input
+              className="bg-gray-100 p-4 w-full border border-black rounded-lg"
+              type="text"
+              name="image_url"
+              placeholder="Image URL"
+            />
+          </div>
             
             <div className="mt-2">
               <input
@@ -75,11 +87,14 @@ const AddProducts = () => {
             </div>
             <div className="mt-2 flex justify-center items-center">
               <input
-                className="bn btn mt-4 w-full bg-green-500 text-white p-4"
+                className="bn btn mt-4 w-full bg-green-500 text-white p-4 "
                 type="submit"
                 value="Add product"
-              />
+                onClick={"alert"}
+                
+             />
             </div>
+          
           </form>
         </div>
       </div>
